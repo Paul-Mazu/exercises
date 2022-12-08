@@ -32,7 +32,6 @@ def union_list(needles, haystack):
             found +=1
     return found
 
-### here starts exercise
 
 def time_different_sizes_in_set(sizes:list) -> list:
     """ 
