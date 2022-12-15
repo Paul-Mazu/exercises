@@ -1,15 +1,9 @@
 from random import randint
-
-
-a_list = [*range(100)]
-number = randint(0, 100)
-
-def find_number(number, list):    
+def find_number(number, list):
     left = 0
     right = len(a_list)
-    index = 0
 
-    while left < right:    
+    while left < right:
         index = (left + right) // 2
 
         if a_list[index] == number:
@@ -19,4 +13,9 @@ def find_number(number, list):
         else:
             right = index
 
-find_number(number, a_list)
+
+
+a_list = [*range(100)]
+number = randint(0, 100)
+
+print(find_number(number, a_list))
