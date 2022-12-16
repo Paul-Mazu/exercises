@@ -28,11 +28,12 @@ def partition(lst, left, right):
     lst[i+1], lst[right] = lst[right], lst[i+1]
     return i + 1
 
+
 # quick sort with pointers in oposit direction
 def quicksort1(lst, left=0, right=-1):
     if right == -1: right = len(lst) -1
     if left < right:
-        partition_pos = partition(lst, left, right)
+        partition_pos = partition1(lst, left, right)
         quicksort1(lst, left, partition_pos -1)
         quicksort1(lst, partition_pos +1, right)
     return lst
@@ -56,11 +57,10 @@ def partition1(lst, left, right):
     return i
 
 
-
-
 a = [3, 7, 2, 8, 4, 6, 9, 15, 1, 4, 5]
 
 if __name__ == "__main__":
     # print(quicksort(a))
     # print(quicksort_lomuto_partition(a))
     # print(quicksort1(a))
+    pass
